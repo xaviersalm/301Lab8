@@ -63,16 +63,15 @@ public class CustomListTest {
         });
 
     }
-/*
+
     @Test
     void testCountCities() {
         CustomList cityList = MockCityList();
-        assertEquals(1, cityList.countCities() );
+        assertEquals(0, cityList.countCities() );
 
         City city = new City("Yellowknife", "Northwest Territories");
         cityList.addCity(city);
-        assertEquals(2, cityList.countCities());
+        assertEquals(1, cityList.countCities());
 
     }
-     */
 }
