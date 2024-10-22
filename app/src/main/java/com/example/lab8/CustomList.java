@@ -62,7 +62,7 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     /**
-     * This checks if a given city is in the city list
+     * This checks if a given city is in the custom list
      *
      * @param city
      * @return Return true if the city is in the list, false otherwise
@@ -80,7 +80,21 @@ public class CustomList extends ArrayAdapter<City> {
         return false;
     }
 
+    /**
+     * Removes a city if its in the custom list, if the city was not in the list, throws an exception
+     *
+     * @param city
+     * @throws IllegalArgumentException if the city is not in the custom list
+     */
     public void deleteCity(City city){
+        // deletes the city from the list
+        if(hasCity(city) == true){
+            cities.remove(city);
+        }
+        else{
+            throw new IllegalArgumentException("This city is not in the city list!");
+        }
+
     }
 
     public int countCities(){

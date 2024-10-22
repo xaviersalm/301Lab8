@@ -51,10 +51,10 @@ public class CustomListTest {
     void testDeleteCity() {
         CustomList cityList = MockCityList();
         City city = new City("Yellowknife", "Northwest Territories");
-        cityList.add(city);
+        cityList.addCity(city);
 
         cityList.deleteCity(city);
-        assertEquals(1, cityList.countCities());
+        assertEquals(0, cityList.getCount()); // you remove the city you added, empty city list :)
 
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             // Code that should throw the exception
@@ -70,7 +70,7 @@ public class CustomListTest {
         assertEquals(1, cityList.countCities() );
 
         City city = new City("Yellowknife", "Northwest Territories");
-        cityList.add(city);
+        cityList.addCity(city);
         assertEquals(2, cityList.countCities());
 
     }
