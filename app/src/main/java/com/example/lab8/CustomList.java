@@ -69,12 +69,14 @@ public class CustomList extends ArrayAdapter<City> {
      */
     public boolean hasCity(City city){
         // is the city in the list?
-
+/*
         for(City inCity : cities){
             if(inCity == city){
                 return true;
             }
         }
+        
+ */
         return false;
     }
 
