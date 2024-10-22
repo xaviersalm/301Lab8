@@ -61,13 +61,15 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
-    public void hasCity(City city){
+    public Boolean hasCity(City city){
+        return false; // again, dummy value so it doesn't get mad
     }
 
     public void deleteCity(City city){
     }
 
     public int countCities(){
+    return -1; // place holder to not get error
     }
 
 }
