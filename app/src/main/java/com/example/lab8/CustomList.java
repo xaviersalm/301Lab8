@@ -61,8 +61,21 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
-    public Boolean hasCity(City city){
-        return false; // again, dummy value so it doesn't get mad
+    /**
+     * This checks if a given city is in the city list
+     *
+     * @param city
+     * @return Return true if the city is in the list, false otherwise
+     */
+    public boolean hasCity(City city){
+        // is the city in the list?
+
+        for(City inCity : cities){
+            if(inCity == city){
+                return true;
+            }
+        }
+        return false;
     }
 
     public void deleteCity(City city){
